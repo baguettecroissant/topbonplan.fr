@@ -117,6 +117,22 @@ export const deals: Deal[] = [
         subcategory: "VPN & Sécurité",
     },
 
+    {
+        title: "Lovable.dev : Créez des apps IA avec +100 crédits offerts",
+        slug: "lovable-dev-credits-gratuits",
+        description: "L'assistant IA de création de logiciels le plus bluffant du marché. Partagez l'amour du code génératif et gagnez des crédits exclusifs.",
+        detailedReview: "Lovable.dev est en train de redéfinir la façon dont nous concevons des applications. En utilisant cette invitation, vous débloquez automatiquement des crédits bonus pour générer vos interfaces et votre code via l'intelligence artificielle. C'est l'outil parfait pour les développeurs, agences, et makers qui veulent diviser leur temps de développement par 10 (Next.js, Tailwind, TypeScript). L'interface intuitive permet d'itérer en temps réel sur les composants générés.",
+        pros: ["Génération d'UI React/Next.js quasi parfaite", "Environnement de preview intégré", "Programme de parrainage très généreux"],
+        cons: ["Nécessite des connaissances tech pour les apps complexes", "Les crédits peuvent descendre vite sur les gros prompts"],
+        image: "/images/deals/lovable.png",
+        price: "0€",
+        originalPrice: "",
+        discount: "+100 crédits",
+        affiliateUrl: "https://lovable.dev/invite/9ARAJH3",
+        category: "SaaS, IA & Logiciels",
+        subcategory: "Création",
+        badge: "✨ IA Code",
+    },
     // MAISON
     {
         title: "Roborock Q7 L5+ Aspirateur Robot avec Station",
