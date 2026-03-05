@@ -204,5 +204,100 @@ export const guides: Guide[] = [
                 answer: "Grâce à la nouvelle norme 'Matter' déployée massivement depuis 2024, ce choix est moins enfermant. Achetez des accessoires certifiés Matter/Thread, et ils fonctionneront simultanément sur vos enceintes Alexa, votre Apple TV (HomeKit) et votre smartphone Android."
             }
         ]
+    },
+    {
+        title: "Lovable.dev : L'IA qui code vos applications à votre place en 2026",
+        slug: "lovable-dev-ia-generative-code-applications-guide",
+        description: "Découvrez Lovable.dev, la plateforme d'IA générative qui transforme vos idées en applications web fonctionnelles en quelques minutes. Guide complet, astuces, et crédits offerts.",
+        coverImage: "/images/guides/lovable-guide-cover.png",
+        publishDate: "2026-03-05",
+        readTime: 10,
+        author: {
+            name: "Thomas D.",
+            role: "Expert Tech & IA",
+            avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Thomas&backgroundColor=b6e3f4",
+            expertise: "Développeur full-stack et passionné d'IA générative, Thomas teste chaque semaine les derniers outils de développement assisté par intelligence artificielle pour TopBonPlan."
+        },
+        category: "SaaS, IA & Logiciels",
+        sections: [
+            {
+                type: "text",
+                h2: "Lovable.dev, c'est quoi exactement ?",
+                content: "Imaginez pouvoir décrire une application en langage naturel — « Crée-moi un dashboard de suivi de dépenses avec des graphiques, un mode sombre et une page de connexion » — et que l'IA vous génère instantanément un projet React/Next.js fonctionnel, avec du vrai code propre, des composants réutilisables et un design professionnel.\\n\\nC'est exactement ce que propose **Lovable.dev**. Née en 2024 et devenue incontournable en 2025, cette plateforme est en train de devenir le GitHub Copilot de la création d'applications complètes. Là où Copilot vous aide ligne par ligne, Lovable génère des **pages entières**, des **systèmes de navigation**, et même des **connexions API** en une seule requête.\\n\\nLe résultat ? Des développeurs qui divisent leur temps de prototypage par 10, et des non-développeurs (product managers, designers, entrepreneurs) capables de créer des MVPs fonctionnels sans écrire une seule ligne de code."
+            },
+            {
+                type: "image",
+                imageUrl: "/images/guides/lovable-guide-cover.png",
+                imageAlt: "Développeur utilisant l'IA Lovable.dev pour générer une interface web avec des composants holographiques"
+            },
+            {
+                type: "text",
+                h2: "Comment fonctionne Lovable.dev : le workflow en 4 étapes",
+                content: "Le génie de Lovable réside dans sa simplicité d'utilisation. Contrairement aux IDE classiques qui demandent des heures de configuration (Node.js, npm, ESLint, Prettier...), Lovable propose un environnement intégré où tout est prêt en 30 secondes."
+            },
+            {
+                type: "list",
+                h3: "Le processus de création d'une app :",
+                listItems: [
+                    "Décrivez votre idée en français (ou en anglais) : 'Je veux un site de réservation de cours de yoga avec un calendrier interactif, un système de paiement Stripe et un espace admin'. Plus votre prompt est précis, meilleur sera le résultat.",
+                    "L'IA génère le code complet : En quelques secondes, Lovable produit un projet Next.js/React avec tous les composants, le routing, le styling (Tailwind CSS + shadcn/ui) et la logique métier. Vous voyez le résultat en temps réel dans la preview intégrée.",
+                    "Itérez en conversation : Comme avec ChatGPT, vous pouvez demander des ajustements ('Change la couleur du header en bleu foncé', 'Ajoute un formulaire de contact'). L'IA modifie chirurgicalement le code existant sans tout casser.",
+                    "Déployez en un clic : Une fois satisfait, Lovable vous permet de déployer directement sur un sous-domaine ou d'exporter le code source vers GitHub pour le personnaliser à votre guise."
+                ]
+            },
+            {
+                type: "text",
+                h2: "Pour qui est fait Lovable.dev ?",
+                content: "Lovable s'adresse à un spectre étonnamment large d'utilisateurs. Les **développeurs expérimentés** l'utilisent pour accélérer drastiquement leur phase de prototypage et éviter le boilerplate répétitif. Les **agences web** l'intègrent pour produire des maquettes interactives fonctionnelles en quelques heures au lieu de quelques semaines.\\n\\nMais la vraie révolution concerne les **entrepreneurs et makers** qui n'ont pas de bagage technique. Avec Lovable, un fondateur de startup peut créer un MVP présentable aux investisseurs en un après-midi, tester son idée auprès de vrais utilisateurs, et itérer jusqu'à trouver le product-market fit — le tout sans recruter un CTO à 80K€/an.\\n\\nLes **étudiants et freelances** ne sont pas en reste : Lovable permet de livrer des projets clients rapidement tout en apprenant des patterns de code générés par l'IA (React hooks, server components, API routes)."
+            },
+            {
+                type: "text",
+                h2: "Lovable vs la concurrence : Bolt, v0, Cursor",
+                content: "Le marché du code assisté par IA explose, et il peut être difficile de s'y retrouver. Voici comment Lovable se positionne face aux alternatives principales :\\n\\n**Lovable vs Bolt.new** : Bolt est rapide pour des prototypes simples, mais Lovable excelle sur les applications multi-pages complexes avec authentification et bases de données. L'avantage Lovable ? La persistance du contexte entre les sessions et la qualité du code généré (composants propres, pas de spaghetti code).\\n\\n**Lovable vs v0 de Vercel** : v0 est excellent pour générer des composants UI individuels (un bouton, un formulaire), mais ne gère pas la logique applicative complète. Lovable crée des **applications entières** avec routing, état global et intégrations tierces.\\n\\n**Lovable vs Cursor** : Cursor est un éditeur de code augmenté par l'IA, pensé pour les développeurs qui veulent garder le contrôle total. Lovable est plus accessible et adapté au prototypage rapide. Ce sont des outils complémentaires plutôt que concurrents."
+            },
+            {
+                type: "text",
+                h2: "Le système de crédits et comment en obtenir gratuitement",
+                content: "Lovable fonctionne sur un système de crédits. Chaque génération ou modification consomme des crédits en fonction de la complexité de la requête. Le plan gratuit offre suffisamment de crédits pour tester la plateforme et créer un premier projet.\\n\\nMais voici l'astuce que peu de gens connaissent : le **programme de parrainage** est extrêmement généreux. Chaque personne qui s'inscrit via votre lien d'invitation reçoit **10 crédits bonus**, et vous recevez **100 crédits** lorsqu'elle souscrit à un plan payant. C'est un cercle vertueux qui permet aux utilisateurs actifs de la communauté d'utiliser la plateforme quasi gratuitement."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["lovable-dev-credits-gratuits"]
+            },
+            {
+                type: "text",
+                h2: "Nos conseils pour tirer le maximum de Lovable",
+                content: "Après plusieurs semaines d'utilisation intensive, voici nos meilleures astuces pour obtenir des résultats bluffants :"
+            },
+            {
+                type: "list",
+                h3: "5 conseils d'expert pour des prompts efficaces :",
+                listItems: [
+                    "Soyez spécifique dans vos descriptions : Au lieu de 'Fais-moi un site e-commerce', écrivez 'Crée une boutique en ligne de sneakers premium avec un header sticky, un carrousel de produits hero, des filtres par marque/taille/prix, et un panier latéral animé en slide-over'.",
+                    "Référencez des sites existants : Lovable comprend les références visuelles. N'hésitez pas à dire 'Inspire-toi du design de Notion pour le dashboard' ou 'Utilise un style similaire à Linear.app pour la navigation'.",
+                    "Itérez par petits incréments : Plutôt qu'un prompt gigantesque de 500 mots, construisez votre app section par section. Commencez par le layout général, puis ajoutez les composants un par un.",
+                    "Exploitez la stack générée : Lovable génère du Next.js + Tailwind CSS + shadcn/ui. Familiarisez-vous avec cette stack pour mieux communiquer vos besoins et comprendre le code produit.",
+                    "Exportez vers GitHub rapidement : Dès que la base vous convient, exportez vers un repo Git. Vous pourrez ensuite itérer avec Cursor ou VS Code pour les ajustements fins et les intégrations custom (Stripe, Supabase, etc.)."
+                ]
+            }
+        ],
+        faqs: [
+            {
+                question: "Lovable.dev est-il gratuit ?",
+                answer: "Oui, Lovable propose un plan gratuit avec des crédits de base pour tester la plateforme. Des plans payants offrent plus de crédits et des fonctionnalités avancées. Le programme de parrainage permet également de gagner des crédits supplémentaires gratuitement."
+            },
+            {
+                question: "Faut-il savoir coder pour utiliser Lovable ?",
+                answer: "Non, c'est justement l'atout majeur de Lovable. Vous décrivez votre application en langage naturel (français ou anglais) et l'IA génère le code pour vous. Cela dit, des connaissances de base en web (HTML, CSS, React) vous aideront à mieux guider l'IA et à personnaliser le résultat."
+            },
+            {
+                question: "Quel type d'applications peut-on créer avec Lovable ?",
+                answer: "Lovable excelle dans la création de SaaS, dashboards, sites vitrines, landing pages, outils internes, portails admin et MVPs de startups. Il génère du code React/Next.js avec Tailwind CSS, ce qui couvre la grande majorité des projets web modernes. Les applications mobiles natives ne sont pas encore supportées."
+            },
+            {
+                question: "Le code généré par Lovable m'appartient-il ?",
+                answer: "Absolument. Vous êtes propriétaire à 100% du code généré. Vous pouvez l'exporter vers GitHub, le modifier librement, le déployer où vous voulez (Vercel, Netlify, votre propre serveur) et même le revendre dans le cadre d'un projet client. Il n'y a aucune restriction de licence."
+            }
+        ]
     }
 ]
