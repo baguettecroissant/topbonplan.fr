@@ -133,6 +133,22 @@ export const deals: Deal[] = [
         subcategory: "Création",
         badge: "✨ IA Code",
     },
+    {
+        title: "RankerFox : 50+ Outils SEO Premium & IA groupés",
+        slug: "rankerfox-outils-seo-marketing-premium",
+        description: "Accédez légalement aux meilleurs outils SEO (Ahrefs, Semrush...) et IA (ChatGPT Plus, Claude) pour une fraction du prix via des licences d'agence groupées.",
+        detailedReview: "La facture des outils marketing peut vite dépasser les 500€/mois pour un freelance ou une petite agence. RankerFox résout ce problème en proposant un accès légal via des licences d'agence partagées. Depuis leur dashboard unifié basé dans le cloud (99.9% d'uptime), vous accédez à plus de 50 références de l'industrie : outils SEO classiques, mais aussi les 3 meilleurs modèles d'IA générative du marché en illimité. Le tout pour le prix d'un seul abonnement basique ailleurs.",
+        pros: ["Économies massives (des milliers d'euros par an)", "Accès cloud unifié très stable", "Service client réactif"],
+        cons: ["Certaines fonctionnalités admin sont bridées (logique de partage)", "L'UI d'accès peut être un peu déroutante au début"],
+        image: "/images/deals/rankerfox.png",
+        price: "~30€",
+        originalPrice: "500€+",
+        discount: "Achat groupé",
+        affiliateUrl: "https://rankerfox.com/?ref=wadestudio",
+        category: "SaaS, IA & Logiciels",
+        subcategory: "Création",
+        badge: "🔥 Hack Marketing",
+    },
     // MAISON
     {
         title: "Roborock Q7 L5+ Aspirateur Robot avec Station",
