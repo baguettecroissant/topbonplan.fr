@@ -86,6 +86,16 @@ export const categories: Category[] = [
         textColor: "text-orange-600",
         count: 6,
         subcategories: ["Mobilité Urbaine", "Fitness", "Outdoor", "Nutrition"],
+        seoContent: [
+            {
+                h2: "Les bons plans sportifs et mobilité urbaine qu'il ne faut pas rater",
+                text: "Le marché du sport et de la mobilité électrique a explosé ces dernières années. Entre les trottinettes électriques Xiaomi, les vélos électriques pliants et les accessoires fitness connectés, il est possible de s'équiper intelligemment sans dépenser une fortune. Notre équipe compare systématiquement les prix entre Amazon, Decathlon, Cdiscount et les sites spécialisés pour vous garantir la meilleure affaire. Nous surveillons également les ventes flash et les déstockages saisonniers.",
+            },
+            {
+                h2: "Comment choisir son équipement de mobilité urbaine ?",
+                text: "Avant d'investir dans une trottinette ou un vélo électrique, vérifiez trois critères essentiels : l'autonomie réelle (souvent 20 à 30% inférieure à l'annonce constructeur), le poids pour la transportabilité quotidienne, et la qualité des pneus (tubeless anti-crevaison de préférence). Nos mini-guides intégrés à chaque deal vous aident à faire le bon choix.",
+            }
+        ]
     },
     {
         name: "Mode & Beauté",
@@ -97,6 +107,16 @@ export const categories: Category[] = [
         textColor: "text-pink-600",
         count: 10,
         subcategories: ["Vêtements", "Chaussures", "Beauté & Soins", "Parfums"],
+        seoContent: [
+            {
+                h2: "Mode et beauté : des économies toute l'année",
+                text: "On n'attend pas les soldes pour bien s'habiller ou prendre soin de soi. Le secteur de la beauté premium (Dyson, GHD, L'Oréal Professionnel) propose régulièrement des offres exclusives en ligne que les magasins physiques n'affichent jamais. Notre veille couvre les grandes marques de cosmétiques, les sèche-cheveux et lisseurs haut de gamme, ainsi que les parfums de créateur. Chaque deal est vérifié pour s'assurer qu'il s'agit bien du prix le plus bas constaté.",
+            },
+            {
+                h2: "Beauté tech : quand la technologie rencontre le soin",
+                text: "Des appareils comme le Dyson Supersonic Nural™ ou les brosses nettoyantes Foreo montrent que l'innovation technologique transforme aussi le secteur beauté. Ces investissements premium se rentabilisent rapidement face aux coûts récurrents en salon. Retrouvez nos avis d'experts et nos comparatifs détaillés pour choisir l'appareil adapté à votre type de cheveux ou de peau.",
+            }
+        ]
     },
     {
         name: "Voyages",
@@ -108,5 +128,15 @@ export const categories: Category[] = [
         textColor: "text-indigo-600",
         count: 5,
         subcategories: ["Bagagerie", "Accessoires Voyage", "Hébergements"],
+        seoContent: [
+            {
+                h2: "Préparer son voyage au meilleur prix",
+                text: "Que vous partiez pour un city-break européen ou un road trip au long cours, l'équipement représente un budget conséquent. Nous dénichons les meilleures offres sur les valises rigides de grandes marques (Samsonite, American Tourister, Eastpak), les accessoires indispensables (adaptateurs universels, coussins de voyage, organiseurs de bagage) et les gadgets connectés pour voyageur (trackers GPS, balances à bagage). Tous nos deals incluent la livraison gratuite.",
+            },
+            {
+                h2: "Comment choisir sa valise en 2026 ?",
+                text: "Le choix d'une valise dépend de votre profil voyage : cabine (55cm) pour les week-ends, moyenne (69cm) pour une semaine, ou grande (75cm+) pour les longs séjours. Privilégiez les systèmes de fermeture rigide sans zip (comme le 3-points Samsonite) qui offrent une sécurité anti-effraction supérieure aux fermetures éclair classiques. Nos comparatifs vous aident à comparer les rapports qualité-prix entre les marques.",
+            }
+        ]
     },
 ]

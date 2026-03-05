@@ -22,8 +22,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!guide) return {}
 
     return {
-        title: `${guide.title} - TopBonPlan`,
+        title: guide.title,
         description: guide.description,
+        keywords: [guide.category, "guide", "comparatif", "test", "avis", guide.title.split(" ").slice(0, 3).join(" ")],
+        alternates: {
+            canonical: `https://topbonplan.fr/guides/${guide.slug}`,
+        },
+        openGraph: {
+            title: guide.title,
+            description: guide.description,
+            type: "article",
+            url: `https://topbonplan.fr/guides/${guide.slug}`,
+            images: [
+                {
+                    url: guide.coverImage,
+                    alt: guide.title,
+                },
+            ],
+        },
     }
 }
 

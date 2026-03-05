@@ -6,13 +6,36 @@ import { guides } from "@/data/guides"
 import { BookOpen, Clock, CalendarDays, ArrowRight } from "lucide-react"
 
 export const metadata = {
-    title: "Guides d'Achat & Comparatifs 2026 | TopBonPlan",
+    title: "Guides d'Achat & Comparatifs 2026",
     description: "Découvrez nos guides d'achat approfondis, nos comparatifs et nos tests pour vous aider à dénicher les vrais bons plans tech et conso de l'année.",
+    keywords: ["guides d'achat", "comparatifs", "tests", "avis", "meilleur choix"],
+    alternates: {
+        canonical: "https://topbonplan.fr/guides",
+    },
 }
 
 export default function GuidesIndex() {
+    // JSON-LD ItemList for Google Rich Results
+    const itemListJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Guides d'Achat & Comparatifs",
+        numberOfItems: guides.length,
+        itemListElement: guides.map((guide, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            url: `https://topbonplan.fr/guides/${guide.slug}`,
+            name: guide.title,
+        })),
+    }
+
     return (
         <div className="min-h-screen flex flex-col bg-background">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+            />
+
             <Header />
 
             <main className="flex-1">

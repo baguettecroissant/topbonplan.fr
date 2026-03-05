@@ -21,8 +21,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!deal) return {}
 
     return {
-        title: `Bon Plan : ${deal.title} à ${deal.price} au lieu de ${deal.originalPrice}`,
-        description: deal.detailedReview?.substring(0, 150) || deal.description,
+        title: `${deal.title} à ${deal.price} au lieu de ${deal.originalPrice} — Bon Plan`,
+        description: deal.detailedReview?.substring(0, 155) || deal.description,
+        keywords: [deal.title, deal.category, deal.subcategory, "bon plan", "promo", "réduction", deal.title.split(" ")[0]],
+        alternates: {
+            canonical: `https://topbonplan.fr/bons-plans/${deal.slug}`,
+        },
+        openGraph: {
+            title: `${deal.title} à ${deal.price}`,
+            description: deal.description,
+            type: "article",
+            url: `https://topbonplan.fr/bons-plans/${deal.slug}`,
+            images: [
+                {
+                    url: deal.image,
+                    alt: deal.title,
+                },
+            ],
+        },
     }
 }
 
@@ -102,9 +118,10 @@ export default async function DealPage({ params }: Props) {
                                 <div className="relative w-full max-w-md aspect-square">
                                     <Image
                                         src={deal.image}
-                                        alt={deal.title}
+                                        alt={`${deal.title} - Bon plan ${deal.category}`}
                                         fill
-                                        className="object-contain" // priority
+                                        priority
+                                        className="object-contain"
                                     />
                                     {deal.badge && (
                                         <div className="absolute top-4 left-4 z-10 pointer-events-none">

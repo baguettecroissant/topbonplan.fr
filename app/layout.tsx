@@ -18,28 +18,52 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-    title: "TopBonPlan.fr | Les Meilleurs Bons Plans & Comparatifs 2026",
+    metadataBase: new URL("https://topbonplan.fr"),
+    title: {
+        default: "TopBonPlan.fr | Les Meilleurs Bons Plans & Comparatifs 2026",
+        template: "%s | TopBonPlan.fr",
+    },
     description:
         "Découvrez les meilleurs bons plans, promotions et comparatifs du moment. High-tech, maison, sport, mode : trouvez le meilleur prix garanti.",
-    keywords: ["bons plans", "promotions", "comparatifs", "meilleur prix", "high-tech", "maison", "réductions", "deals"],
+    keywords: ["bons plans", "promotions", "comparatifs", "meilleur prix", "high-tech", "maison", "réductions", "deals", "codes promo", "bon plan tech"],
     authors: [{ name: "TopBonPlan" }],
     creator: "TopBonPlan",
     publisher: "TopBonPlan",
+    alternates: {
+        canonical: "https://topbonplan.fr",
+    },
     openGraph: {
         title: "TopBonPlan.fr | Les Meilleurs Bons Plans & Comparatifs 2026",
         description: "Découvrez les meilleurs bons plans, promotions et comparatifs du moment.",
         type: "website",
         locale: "fr_FR",
         siteName: "TopBonPlan",
+        url: "https://topbonplan.fr",
+        images: [
+            {
+                url: "/icon.png",
+                width: 512,
+                height: 512,
+                alt: "TopBonPlan.fr - Les Meilleurs Bons Plans",
+            },
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "TopBonPlan.fr | Bons Plans & Comparatifs",
         description: "Les meilleurs deals du web, testés et approuvés.",
+        images: ["/icon.png"],
     },
     robots: {
         index: true,
         follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
     },
     icons: {
         icon: [
@@ -65,12 +89,7 @@ export default function RootLayout({
     return (
         <html lang="fr">
             <head>
-                <Script
-                    defer
-                    src="https://cloud.umami.is/script.js"
-                    data-website-id="REPLACE_WITH_UMAMI_ID"
-                    strategy="afterInteractive"
-                />
+                {/* Analytics: Ajoutez votre script ici quand prêt */}
             </head>
             <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
                 {children}

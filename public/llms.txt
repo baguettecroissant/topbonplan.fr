@@ -1,0 +1,41 @@
+# TopBonPlan.fr
+
+> Site indépendant de bons plans, comparatifs et guides d'achat. Basé en France. 100% indépendant.
+
+## À propos
+TopBonPlan.fr est un site de recommandation de produits qui aide les consommateurs francophones à trouver les meilleures offres et promotions du moment. Chaque deal est vérifié manuellement par notre équipe d'experts. Nous couvrons les univers High-Tech, SaaS & IA, Maison & Cuisine, Sport & Loisirs, Mode & Beauté et Voyages.
+
+## URLs principales
+
+- Page d'accueil : https://topbonplan.fr
+- Tous les bons plans : https://topbonplan.fr/bons-plans
+- Guides d'achat : https://topbonplan.fr/guides
+
+### Catégories
+- High-Tech : https://topbonplan.fr/high-tech
+- SaaS, IA & Logiciels : https://topbonplan.fr/saas-logiciels
+- Maison & Cuisine : https://topbonplan.fr/maison
+- Sport & Loisirs : https://topbonplan.fr/sport
+- Mode & Beauté : https://topbonplan.fr/mode
+- Voyages : https://topbonplan.fr/voyages
+
+### Guides récents
+- Quel VPN choisir en 2026 : https://topbonplan.fr/guides/quel-vpn-choisir-2026-guide-complet
+- Guide Maison Connectée 2026 : https://topbonplan.fr/guides/guide-maison-connectee-robot-aspirateur-domotique
+
+### Bons plans populaires
+- Apple AirPods 4 ANC : https://topbonplan.fr/bons-plans/apple-airpods-4-anc
+- NordVPN -76% : https://topbonplan.fr/bons-plans/nordvpn-76-promo-3-mois-offerts
+- Roborock Q7 L5+ : https://topbonplan.fr/bons-plans/robot-aspirateur-roborock-q7-max-plus
+- Dyson Supersonic Nural : https://topbonplan.fr/bons-plans/dyson-supersonic-nural-seche-cheveux
+- NINJA Double Stack XL : https://topbonplan.fr/bons-plans/ninja-foodi-double-stack-xl-air-fryer
+- Xiaomi Redmi Note 13 Pro 5G : https://topbonplan.fr/bons-plans/xiaomi-redmi-note-13-pro-5g
+- Samsung Galaxy Watch 6 Classic : https://topbonplan.fr/bons-plans/samsung-galaxy-watch-6-classic-47mm
+- Samsonite S'Cure Spinner : https://topbonplan.fr/bons-plans/samsonite-scure-spinner-69cm
+
+## Informations complémentaires
+- Langue : Français (fr-FR)
+- Mise à jour : Quotidienne
+- Sitemap XML : https://topbonplan.fr/sitemap.xml
+- Contact : https://topbonplan.fr/contact
+- À propos : https://topbonplan.fr/a-propos

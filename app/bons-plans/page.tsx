@@ -7,13 +7,36 @@ import { Zap } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Tous les Bons Plans du Moment | TopBonPlan.fr",
+    title: "Tous les Bons Plans du Moment",
     description: "Découvrez notre sélection de bons plans vérifiés : high-tech, maison, sport, mode. Prix cassés et promotions exclusives, mis à jour quotidiennement.",
+    keywords: ["bons plans", "promotions", "deals", "réductions", "codes promo", "prix cassés"],
+    alternates: {
+        canonical: "https://topbonplan.fr/bons-plans",
+    },
 }
 
 export default function BonsPlansPage() {
+    // JSON-LD ItemList for Google Rich Results
+    const itemListJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Tous les Bons Plans du Moment",
+        numberOfItems: deals.length,
+        itemListElement: deals.map((deal, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            url: `https://topbonplan.fr/bons-plans/${deal.slug}`,
+            name: deal.title,
+        })),
+    }
+
     return (
         <div className="min-h-screen flex flex-col bg-background">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+            />
+
             <Header />
 
             <main className="flex-1">

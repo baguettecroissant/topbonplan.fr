@@ -19,8 +19,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!category) return {}
 
     return {
-        title: `Bons plans ${category.name} : Codes promo & réductions 2026 | TopBonPlan`,
+        title: `Bons plans ${category.name} : Codes promo & réductions 2026`,
         description: `Découvrez tous nos bons plans et codes promo vérifiés pour l'univers ${category.name}. Économisez sur vos achats ${category.subcategories?.join(", ")}.`,
+        keywords: [category.name, "bons plans", "promo", "réduction", "code promo", ...category.subcategories],
+        alternates: {
+            canonical: `https://topbonplan.fr/${category.slug}`,
+        },
+        openGraph: {
+            title: `Bons Plans ${category.name} 2026`,
+            description: `Les meilleures promotions ${category.name} du moment.`,
+            type: "website",
+            url: `https://topbonplan.fr/${category.slug}`,
+        },
     }
 }
 

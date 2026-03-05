@@ -13,8 +13,40 @@ export default function HomePage() {
     const latestDeals = deals.slice(0, 4)
     const latestGuides = guides.slice(0, 2)
 
+    // JSON-LD Structured Data: WebSite + Organization
+    const websiteJsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                name: "TopBonPlan",
+                url: "https://topbonplan.fr",
+                description: "Les meilleurs bons plans, promotions et comparatifs du moment. High-tech, maison, sport, mode : trouvez le meilleur prix garanti.",
+                inLanguage: "fr-FR",
+                potentialAction: {
+                    "@type": "SearchAction",
+                    target: "https://topbonplan.fr/bons-plans?q={search_term_string}",
+                    "query-input": "required name=search_term_string",
+                },
+            },
+            {
+                "@type": "Organization",
+                name: "TopBonPlan",
+                url: "https://topbonplan.fr",
+                logo: "https://topbonplan.fr/icon.png",
+                sameAs: [],
+                description: "Site indépendant de bons plans et comparatifs, basé en France. Chaque deal est vérifié manuellement par notre équipe d'experts.",
+            },
+        ],
+    }
+
     return (
         <div className="min-h-screen flex flex-col bg-background">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+            />
+
             <Header />
 
             <main className="flex-1">

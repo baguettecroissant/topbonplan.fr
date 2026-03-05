@@ -4,10 +4,10 @@ import { categories } from "@/data/categories"
 
 export function Footer() {
     const populaires = [
-        { name: "NordVPN à -73%", href: "/saas-logiciels" },
-        { name: "AirPods Pro 2", href: "/high-tech" },
-        { name: "Roborock Q7 Max+", href: "/maison" },
-        { name: "Xiaomi Scooter 4", href: "/sport" },
+        { name: "NordVPN : -76% + 3 mois offerts", href: "/bons-plans/nordvpn-76-promo-3-mois-offerts" },
+        { name: "Apple AirPods 4 ANC", href: "/bons-plans/apple-airpods-4-anc" },
+        { name: "Roborock Q7 L5+", href: "/bons-plans/robot-aspirateur-roborock-q7-max-plus" },
+        { name: "Dyson Supersonic Nural™", href: "/bons-plans/dyson-supersonic-nural-seche-cheveux" },
     ]
 
     const legale = [
