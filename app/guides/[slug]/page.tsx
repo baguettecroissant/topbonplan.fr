@@ -120,7 +120,7 @@ export default async function GuideSingle({ params }: Props) {
 
                         <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground font-medium pb-12">
                             <div className="flex items-center gap-2">
-                                <Image src={guide.author.avatar} alt={guide.author.name} width={32} height={32} className="rounded-full bg-gray-100" />
+                                <Image src={guide.author.avatar} alt={guide.author.name} width={32} height={32} unoptimized className="rounded-full bg-gray-100" />
                                 <span>Par <strong className="text-foreground">{guide.author.name}</strong></span>
                             </div>
                             <div className="flex items-center gap-1.5">

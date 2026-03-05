@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { DealCard } from "@/components/deal-card"
+import { DealsFilterGrid } from "@/components/deals-filter-grid"
 import { deals } from "@/data/deals"
 import { categories } from "@/data/categories"
 import { Zap } from "lucide-react"
@@ -56,29 +56,9 @@ export default function BonsPlansPage() {
                     </div>
                 </section>
 
-                {/* Deals Grid */}
+                {/* Deals Grid with interactive filters */}
                 <section className="py-12 md:py-16 container mx-auto px-4">
-
-                    {/* Category filters */}
-                    <div className="flex flex-wrap gap-2 mb-10">
-                        <button className="px-4 py-2 rounded-full text-sm font-semibold bg-primary text-white">
-                            Tous
-                        </button>
-                        {categories.map((cat) => (
-                            <button
-                                key={cat.slug}
-                                className="px-4 py-2 rounded-full text-sm font-semibold bg-white text-muted-foreground border border-black/5 hover:border-primary hover:text-primary transition-colors"
-                            >
-                                {cat.name}
-                            </button>
-                        ))}
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {deals.map((deal) => (
-                            <DealCard key={deal.title} deal={deal} />
-                        ))}
-                    </div>
+                    <DealsFilterGrid deals={deals} categories={categories} />
                 </section>
             </main>
 

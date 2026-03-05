@@ -14,8 +14,9 @@ export function AuthorBio({ author }: { author: Author }) {
             <div className="relative w-20 h-20 shrink-0">
                 <Image
                     src={author.avatar}
-                    alt={`Portrait expat de ${author.name}`}
+                    alt={`Portrait de ${author.name}`}
                     fill
+                    unoptimized
                     className="rounded-full object-cover border-4 border-gray-50 bg-gray-100"
                 />
                 <div className="absolute -bottom-1 -right-1 bg-blue-500 text-white p-1 rounded-full border-2 border-white" title="Expert vérifié">

@@ -153,20 +153,20 @@ export const deals: Deal[] = [
 
     // SPORT & MOBILITÉ
     {
-        title: "Trottinette Xiaomi Electric Scooter 4",
-        slug: "trottinette-xiaomi-electric-scooter-4",
-        description: "Autonomie 35km, vitesse max 25km/h, pneus 10 pouces tubeless. Idéal pour les trajets quotidiens.",
-        detailedReview: "Plus large, plus grande, plus stable : Xiaomi a corrigé les défauts de la génération 3. L'Electric Scooter 4 passe au 10 pouces (pneus tubeless sans chambre à air), ce qui réduit drastiquement le risque de crevaison et améliore le confort sur pavés. Son freinage à double action et son moteur capable d'encaisser 16% d'inclinaison en font l'engin de micro-mobilité ultime pour un commuting urbain sécurisé.",
-        pros: ["Pneus 10 pouces Tubeless très confortables", "Deck (plateau) élargi", "Pliage toujours aussi pratique en 3 secondes"],
-        cons: ["Autonomie réelle plus proche de 25km que 35km", "Un peu lourde pour les escaliers sans ascenseur (17kg)"],
-        image: "/images/deals/xiaomi-scooter.jpg",
-        price: "399€",
-        originalPrice: "499€",
-        discount: "-20%",
-        affiliateUrl: "https://www.amazon.fr/dp/B0C3Y4W1FB?tag=topbonplan-21",
+        title: "Xiaomi Electric Scooter 4 Lite (2e Gen)",
+        slug: "xiaomi-electric-scooter-4-lite-2",
+        description: "Design élégant, pneus 10 pouces, autonomie 25km, moteur 300W. L'essentiel de la mobilité urbaine à petit prix.",
+        detailedReview: "La 2ème génération de la version Lite apporte enfin des pneus 10 pouces pour un confort grandement amélioré sur route. Avec son moteur de 300W (capable de grimper des pentes à 15%), son double freinage (Tambour/E-ABS) et son design repensé plus robuste, c'redevient le maître l'incontesté de l'entrée de gamme. Parfaite pour les trajets urbains du quotidien (autonomie max 25km).",
+        pros: ["Pneus 10 pouces absorbant bien les chocs", "Double système de freinage rassurant", "Excellent rapport qualité/prix"],
+        cons: ["Autonomie limitée à 25km", "Vitesse max de 25km/h classique"],
+        image: "/images/deals/xiaomi-scooter-4-lite-2.png",
+        price: "249€",
+        originalPrice: "299€",
+        discount: "-17%",
+        affiliateUrl: "https://amzn.to/3MYFoda",
         category: "Sport & Loisirs",
         subcategory: "Mobilité Urbaine",
-        badge: "🛴 Top mobilité",
+        badge: "🛴 Top mobilité urbaine",
     },
 
     // VOYAGE
