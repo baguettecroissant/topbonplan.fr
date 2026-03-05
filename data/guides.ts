@@ -1,3 +1,5 @@
+import { Author, authors } from "./authors"
+
 export interface FAQ {
     question: string
     answer: string
@@ -21,12 +23,7 @@ export interface Guide {
     coverImage: string
     publishDate: string
     readTime: number
-    author: {
-        name: string
-        role: string
-        avatar: string
-        expertise: string
-    }
+    author: Author
     category: string
     sections: GuideSection[]
     faqs: FAQ[]
@@ -40,12 +37,7 @@ export const guides: Guide[] = [
         coverImage: "/images/guides/vpn-guide-cover.jpg",
         publishDate: "2026-03-01",
         readTime: 12, // Increased read time due to expansion
-        author: {
-            name: "Thomas D.",
-            role: "Expert Réseaux & Cybersécurité",
-            avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Thomas&backgroundColor=b6e3f4",
-            expertise: "Ancien sysadmin, Thomas décortique les protocoles de chiffrement et traque les fuites DNS sur TopBonPlan depuis 3 ans."
-        },
+        author: authors.find(a => a.id === "thomas-d")!,
         category: "SaaS, IA & Logiciels",
         sections: [
             {
@@ -129,12 +121,7 @@ export const guides: Guide[] = [
         coverImage: "/images/guides/smarthome-guide-cover.jpg",
         publishDate: "2026-03-03",
         readTime: 10,
-        author: {
-            name: "Claire M.",
-            role: "Spécialiste Domotique & IoT",
-            avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Claire&backgroundColor=ffdfbf",
-            expertise: "Claire a domotisé son appartement de A à Z. Elle teste et configure les derniers gadgets IoT et protocoles Zigbee pour TopBonPlan."
-        },
+        author: authors.find(a => a.id === "claire-m")!,
         category: "Maison & Cuisine",
         sections: [
             {
@@ -212,12 +199,7 @@ export const guides: Guide[] = [
         coverImage: "/images/guides/lovable-guide-cover.png",
         publishDate: "2026-03-05",
         readTime: 10,
-        author: {
-            name: "Thomas D.",
-            role: "Expert Tech & IA",
-            avatar: "https://api.dicebear.com/7.x/notionists/svg?seed=Thomas&backgroundColor=b6e3f4",
-            expertise: "Développeur full-stack et passionné d'IA générative, Thomas teste chaque semaine les derniers outils de développement assisté par intelligence artificielle pour TopBonPlan."
-        },
+        author: authors.find(a => a.id === "thomas-d")!,
         category: "SaaS, IA & Logiciels",
         sections: [
             {
