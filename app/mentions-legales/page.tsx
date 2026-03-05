@@ -21,7 +21,7 @@ export default function MentionsLegalesPage() {
                         <p>
                             Le site TopBonPlan.fr est édité par un particulier.<br />
                             Directeur de la publication : [Nom à compléter]<br />
-                            Email : contact@topbonplan.fr
+                            Contact : <a href="/contact" className="text-primary hover:underline">Formulaire de contact</a>
                         </p>
                     </section>
 
@@ -63,8 +63,8 @@ export default function MentionsLegalesPage() {
                     <section>
                         <h2 className="text-xl font-bold text-foreground">Contact</h2>
                         <p>
-                            Pour toute question relative au site, vous pouvez nous contacter à l'adresse :
-                            <a href="mailto:contact@topbonplan.fr" className="text-primary hover:underline ml-1">contact@topbonplan.fr</a>
+                            Pour toute question relative au site, vous pouvez nous contacter via notre
+                            <a href="/contact" className="text-primary hover:underline ml-1">formulaire de contact</a>.
                         </p>
                     </section>
                 </div>

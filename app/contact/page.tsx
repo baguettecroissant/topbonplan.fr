@@ -20,35 +20,83 @@ export default function ContactPage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <a
-                        href="mailto:contact@topbonplan.fr"
-                        className="group flex flex-col items-center p-8 bg-white rounded-2xl border border-black/5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                    >
-                        <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                            <Mail className="w-8 h-8" />
+                <div className="max-w-xl mx-auto bg-white rounded-3xl p-8 border border-black/5 shadow-sm">
+                    <form action="https://formspree.io/f/mkoqwogb" method="POST" className="space-y-6">
+                        <div className="space-y-2">
+                            <label htmlFor="name" className="text-sm font-semibold text-foreground">
+                                Votre nom
+                            </label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                required
+                                className="w-full px-4 py-3 rounded-xl border border-black/5 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm"
+                                placeholder="Jean Dupont"
+                            />
                         </div>
-                        <h3 className="font-heading font-bold text-lg mb-2">Email</h3>
-                        <p className="text-muted-foreground text-sm text-center">contact@topbonplan.fr</p>
-                    </a>
 
-                    <div className="group flex flex-col items-center p-8 bg-white rounded-2xl border border-black/5 shadow-sm">
-                        <div className="w-16 h-16 rounded-2xl bg-accent/10 text-accent flex items-center justify-center mb-4">
-                            <MessageSquare className="w-8 h-8" />
+                        <div className="space-y-2">
+                            <label htmlFor="email" className="text-sm font-semibold text-foreground">
+                                Adresse email
+                            </label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                required
+                                className="w-full px-4 py-3 rounded-xl border border-black/5 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm"
+                                placeholder="jean@exemple.com"
+                            />
                         </div>
-                        <h3 className="font-heading font-bold text-lg mb-2">Partenariats</h3>
-                        <p className="text-muted-foreground text-sm text-center">
-                            Pour les demandes de partenariat ou de contenu sponsorisé, écrivez-nous par email.
+
+                        <div className="space-y-2">
+                            <label htmlFor="subject" className="text-sm font-semibold text-foreground">
+                                Sujet
+                            </label>
+                            <select
+                                name="subject"
+                                id="subject"
+                                required
+                                className="w-full px-4 py-3 rounded-xl border border-black/5 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm appearance-none"
+                            >
+                                <option value="" disabled selected>Choisissez le motif principal</option>
+                                <option value="Signaler un bon plan">Signaler un bon plan</option>
+                                <option value="Partenariat pro">Demande de partenariat / Sponsoring</option>
+                                <option value="Erreur sur le site">Signaler une erreur sur un deal</option>
+                                <option value="Autre demande">Autre demande</option>
+                            </select>
+                        </div>
+
+                        <div className="space-y-2">
+                            <label htmlFor="message" className="text-sm font-semibold text-foreground">
+                                Votre message
+                            </label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows={5}
+                                required
+                                className="w-full px-4 py-3 rounded-xl border border-black/5 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm resize-none"
+                                placeholder="Bonjour, je vous contacte à propos de..."
+                            ></textarea>
+                        </div>
+
+                        {/* Formspree anti-spam honeypot */}
+                        <input type="text" name="_gotcha" style={{ display: "none" }} />
+
+                        <button
+                            type="submit"
+                            className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-xl transition-colors shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                        >
+                            <Mail className="w-5 h-5" />
+                            Envoyer le message
+                        </button>
+
+                        <p className="text-xs text-center text-muted-foreground mt-4">
+                            En validant, vous acceptez que vos informations soient utilisées pour vous recontacter. Aucune donnée n'est revendue.
                         </p>
-                    </div>
-                </div>
-
-                <div className="mt-12 p-6 bg-white rounded-2xl border border-black/5 shadow-sm">
-                    <h3 className="font-heading font-bold text-lg mb-3">Signaler un bon plan</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                        Vous avez trouvé un deal incroyable que nous n'avons pas encore repéré ? Envoyez-nous le lien par email
-                        et notre équipe le vérifiera dans les plus brefs délais. Si le bon plan est retenu, il sera publié sur le site !
-                    </p>
+                    </form>
                 </div>
             </main>
             <Footer />
