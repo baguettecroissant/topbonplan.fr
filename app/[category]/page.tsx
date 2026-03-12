@@ -6,8 +6,10 @@ import { DealCard } from "@/components/deal-card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { RelatedCategories } from "@/components/related-categories"
 import { categories } from "@/data/categories"
-import { deals } from "@/data/deals"
 import { Zap, LayoutGrid } from "lucide-react"
+import { getDeals } from "@/lib/deals-service"
+
+export const revalidate = 86400 // Revalidate every 24 hours
 
 type Props = {
     params: Promise<{ category: string }>
@@ -48,7 +50,8 @@ export default async function CategoryHubPage({ params }: Props) {
         notFound()
     }
 
-    const categoryDeals = deals.filter((d) => d.category === category.name)
+    const allDeals = await getDeals()
+    const categoryDeals = allDeals.filter((d) => d.category === category.name)
 
     const breadcrumbItems = [
         { label: category.name, href: `/${category.slug}` },

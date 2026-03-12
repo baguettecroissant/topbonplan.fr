@@ -7,10 +7,14 @@ import { guides } from "@/data/guides"
 import Link from "next/link"
 import { Zap, ArrowRight, Shield, Search, ThumbsUp, BookOpen, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getDeals } from "@/lib/deals-service"
 
-export default function HomePage() {
-    const featuredDeals = deals.filter((d) => d.isFeatured)
-    const latestDeals = deals.slice(0, 4)
+export const revalidate = 86400 // Revalidate every 24 hours
+
+export default async function HomePage() {
+    const allDeals = await getDeals()
+    const featuredDeals = allDeals.filter((d) => d.isFeatured)
+    const latestDeals = allDeals.slice(0, 4)
     const latestGuides = guides.slice(0, 2)
 
     // JSON-LD Structured Data: WebSite + Organization

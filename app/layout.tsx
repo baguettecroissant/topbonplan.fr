@@ -89,7 +89,7 @@ export default function RootLayout({
     return (
         <html lang="fr">
             <head>
-                {/* Analytics: Ajoutez votre script ici quand prêt */}
+                <script defer src="https://nhmvgsrwhjsjnpncpiaj.supabase.co/functions/v1/analytics-collect?script=1"></script>
             </head>
             <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
                 {children}
