@@ -9,7 +9,11 @@ import { Breadcrumb } from "@/components/breadcrumb"
 import { DealCard } from "@/components/deal-card"
 import { Button } from "@/components/ui/button"
 import { deals } from "@/data/deals"
+import { getDealBySlug, getDeals } from "@/lib/deals-service"
 import { categories } from "@/data/categories"
+
+export const revalidate = 86400 // ISR for 24h
+export const dynamicParams = true // Enable dynamic building for non-generated pages
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -17,7 +21,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const resolvedParams = await params
-    const deal = deals.find((d) => d.slug === resolvedParams.slug)
+    const deal = await getDealBySlug(resolvedParams.slug)
     if (!deal) return {}
 
     return {
@@ -42,15 +46,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-export function generateStaticParams() {
-    return deals.map((deal) => ({
+export async function generateStaticParams() {
+    const allDeals = await getDeals()
+    return allDeals.map((deal) => ({
         slug: deal.slug,
     }))
 }
 
 export default async function DealPage({ params }: Props) {
     const resolvedParams = await params
-    const deal = deals.find((d) => d.slug === resolvedParams.slug)
+    const deal = await getDealBySlug(resolvedParams.slug)
 
     if (!deal) {
         notFound()
@@ -61,7 +66,8 @@ export default async function DealPage({ params }: Props) {
     const categorySlug = category?.slug || "#"
 
     // Related Deals in same category
-    const relatedDeals = deals
+    const allDeals = await getDeals()
+    const relatedDeals = allDeals
         .filter((d) => d.category === deal.category && d.slug !== deal.slug)
         .slice(0, 4)
 
