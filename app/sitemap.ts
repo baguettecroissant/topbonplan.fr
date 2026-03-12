@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next"
 import { categories } from "@/data/categories"
-import { deals } from "@/data/deals"
+import { getDeals } from "@/lib/deals-service"
 import { guides } from "@/data/guides"
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = "https://topbonplan.fr"
+    const allDeals = await getDeals()
 
     const staticPages = [
         {
@@ -52,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }))
 
-    const dealPages = deals.map((deal) => ({
+    const dealPages = allDeals.map((deal) => ({
         url: `${baseUrl}/bons-plans/${deal.slug}`,
         lastModified: new Date(),
         changeFrequency: "daily" as const,

@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { DealsFilterGrid } from "@/components/deals-filter-grid"
-import { deals } from "@/data/deals"
+import { getDeals } from "@/lib/deals-service"
 import { categories } from "@/data/categories"
 import { Zap } from "lucide-react"
 import type { Metadata } from "next"
@@ -15,7 +15,9 @@ export const metadata: Metadata = {
     },
 }
 
-export default function BonsPlansPage() {
+export default async function BonsPlansPage() {
+    const deals = await getDeals()
+
     // JSON-LD ItemList for Google Rich Results
     const itemListJsonLd = {
         "@context": "https://schema.org",
