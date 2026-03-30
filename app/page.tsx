@@ -11,6 +11,12 @@ import { getDeals } from "@/lib/deals-service"
 
 export const revalidate = 86400 // Revalidate every 24 hours
 
+export const metadata = {
+    alternates: {
+        canonical: "https://topbonplan.fr",
+    },
+}
+
 export default async function HomePage() {
     const allDeals = await getDeals()
     const featuredDeals = allDeals.filter((d) => d.isFeatured)

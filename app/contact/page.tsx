@@ -6,6 +6,9 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
     title: "Contactez-nous | TopBonPlan.fr",
     description: "Une question, un partenariat, ou un deal à signaler ? Écrivez à l'équipe TopBonPlan.fr, nous répondons en moins de 24h.",
+    alternates: {
+        canonical: "https://topbonplan.fr/contact",
+    },
 }
 
 export default function ContactPage() {

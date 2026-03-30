@@ -22,6 +22,11 @@ TopBonPlan.fr est un site de recommandation de produits qui aide les consommateu
 ### Guides récents
 - Quel VPN choisir en 2026 : https://topbonplan.fr/guides/quel-vpn-choisir-2026-guide-complet
 - Guide Maison Connectée 2026 : https://topbonplan.fr/guides/guide-maison-connectee-robot-aspirateur-domotique
+- Guide d'Achat Smartphone 2026 : https://topbonplan.fr/guides/guide-achat-meilleur-smartphone-2026
+- Casques & Écouteurs ANC 2026 : https://topbonplan.fr/guides/guide-meilleur-casque-ecouteurs-anc-sans-fil
+- Comparatif Air Fryers 2026 : https://topbonplan.fr/guides/guide-comparatif-meilleur-air-fryer-friteuse-sans-huile
+- Montres Connectées (Samsung vs Garmin) : https://topbonplan.fr/guides/guide-comparatif-montre-connectee-sport-sante
+- Sèche-Cheveux & Lisseurs (Dyson/GHD) : https://topbonplan.fr/guides/guide-comparatif-meilleur-seche-cheveux-dyson-ghd
 
 ### Bons plans populaires
 - Apple AirPods 4 ANC : https://topbonplan.fr/bons-plans/apple-airpods-4-anc
@@ -31,6 +36,8 @@ TopBonPlan.fr est un site de recommandation de produits qui aide les consommateu
 - NINJA Double Stack XL : https://topbonplan.fr/bons-plans/ninja-foodi-double-stack-xl-air-fryer
 - Xiaomi Redmi Note 13 Pro 5G : https://topbonplan.fr/bons-plans/xiaomi-redmi-note-13-pro-5g
 - Samsung Galaxy Watch 6 Classic : https://topbonplan.fr/bons-plans/samsung-galaxy-watch-6-classic-47mm
+- Garmin Venu 4 : https://topbonplan.fr/bons-plans/garmin-venu-4-montre-gps-amoled-lunar-gold
+- Lisseur GHD Gold : https://topbonplan.fr/bons-plans/ghd-gold-lisseur-cheveux-professionnel
 - Samsonite S'Cure Spinner : https://topbonplan.fr/bons-plans/samsonite-scure-spinner-69cm
 
 ## Informations complémentaires

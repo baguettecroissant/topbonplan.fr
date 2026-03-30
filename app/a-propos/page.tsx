@@ -9,6 +9,9 @@ import { authors } from "@/data/authors"
 export const metadata: Metadata = {
     title: "À Propos de Nous | L'Équipe TopBonPlan.fr",
     description: "Découvrez l'équipe d'experts tech et notre mission : vous dénicher les vrais bons plans du net, validés humainement 100% indépendamment.",
+    alternates: {
+        canonical: "https://topbonplan.fr/a-propos",
+    },
 }
 
 export default function AboutPage() {

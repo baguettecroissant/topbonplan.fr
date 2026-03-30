@@ -30,7 +30,6 @@ export const metadata: Metadata = {
     creator: "TopBonPlan",
     publisher: "TopBonPlan",
     alternates: {
-        canonical: "https://topbonplan.fr",
         languages: {
             "fr": "https://topbonplan.fr",
         },
