@@ -22,6 +22,7 @@ export interface Guide {
     description: string
     coverImage: string
     publishDate: string
+    lastModified?: string
     readTime: number
     author: Author
     category: string
@@ -279,6 +280,297 @@ export const guides: Guide[] = [
             {
                 question: "Le code généré par Lovable m'appartient-il ?",
                 answer: "Absolument. Vous êtes propriétaire à 100% du code généré. Vous pouvez l'exporter vers GitHub, le modifier librement, le déployer où vous voulez (Vercel, Netlify, votre propre serveur) et même le revendre dans le cadre d'un projet client. Il n'y a aucune restriction de licence."
+            }
+        ]
+    },
+    {
+        title: "Smartphones 2026 : Le Guide d'Achat selon votre Budget",
+        slug: "guide-achat-meilleur-smartphone-2026",
+        description: "De l'entrée de gamme ultra-compétitif au très haut de gamme dopé à l'IA, découvrez notre grand comparatif des meilleurs smartphones à acheter en 2026 selon vos besoins et votre budget réels.",
+        coverImage: "/images/deals/redmi-note-13.jpg", // Using deal image as fallback if no specific guide image
+        publishDate: "2026-03-10",
+        readTime: 12,
+        author: authors.find(a => a.id === "thomas-d")!,
+        category: "High-Tech",
+        sections: [
+            {
+                type: "text",
+                h2: "Le marché en 2026 : La maturité de l'IA et de la photo",
+                content: "Cette année, le marché des smartphones a atteint un niveau de maturité impressionnant. L'intelligence artificielle, autrefois réservée aux modèles \"Ultra\" ou \"Pro\" à plus de 1000€, s'est démocratisée. Aujourd'hui, des fonctions comme la retouche photo générative, la traduction instantanée ou la transcription d'appels se retrouvent sur des modèles de milieu de gamme.\n\nMais face à l'avalanche de références, comment ne pas sur-payer son téléphone ? La règle d'or est d'identifier votre usage prioritaire : êtes-vous un créateur de contenu (besoin d'excellents capteurs et de beaucoup de stockage), un joueur mobile (besoin d'un SoC puissant et d'un bon refroidissement), ou cherchez-vous simplement un appareil fiable qui tient la batterie ?"
+            },
+            {
+                type: "list",
+                h3: "Les critères essentiels à vérifier avant d'acheter :",
+                listItems: [
+                    "L'écran : Privilégiez l'OLED (ou AMOLED) avec un taux de rafraîchissement d'au moins 120Hz pour un confort visuel optimal.",
+                    "Le suivi logiciel : Un bon smartphone doit garantir au moins 4 à 5 ans de mises à jour de sécurité (Samsung et Google offrent jusqu'à 7 ans sur leurs modèles premium).",
+                    "Le capteur photo principal : Ne vous fiez pas seulement aux mégapixels. Un bon capteur 50MP avec une véritable stabilisation optique (OIS) vaut mieux que 4 petits capteurs bas de gamme."
+                ]
+            },
+            {
+                type: "text",
+                h2: "Moins de 300€ : L'impossible compromis enfin trouvé",
+                content: "Historiquement, acheter un smartphone à moins de 300€ signifiait sacrifier l'écran ou la partie photo. Xiaomi a rebattu les cartes avec sa gamme Redmi Note. Le modèle 13 Pro 5G en est la démonstration parfaite : il emprunte des composants au segment premium (capteur 200 Mégapixels, écran AMOLED 120Hz, charge très rapide) pour les proposer à un tarif sacrifié."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["xiaomi-redmi-note-13-pro-5g"]
+            },
+            {
+                type: "text",
+                h2: "Le segment Premium : Le choc des titans Google et Samsung",
+                content: "Si votre budget dépasse les 1000€, vous entrez dans la cour des grands. Ici, l'écosystème et le traitement algorithmique (IA) font toute la différence. Le **Samsung Galaxy S24 Ultra** reste le roi polyvalent avec son stylet intégré et son zoom optique périscopique unique sur le marché. De l'autre côté, le **Google Pixel 10 Pro** s'est imposé comme le meilleur photophone \"point-and-shoot\" (visez et photographiez), garantissant un cliché parfait à chaque fois, même sur des cibles en mouvement, grâce à sa puce Tensor G5."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["samsung-galaxy-s24-ultra-titanium-black", "google-pixel-10-pro-quartz-gris-256-go"]
+            }
+        ],
+        faqs: [
+            {
+                question: "Combien de RAM (mémoire vive) faut-il sur un smartphone Android en 2026 ?",
+                answer: "Le strict minimum est aujourd'hui de 8 Go. Si vous gardez beaucoup d'applications ouvertes ou jouez à des jeux 3D gourmands (Genshin Impact, Call of Duty), optez pour 12 Go. Les modèles avec seulement 4 ou 6 Go vieilliront très vite et souffriront de ralentissements."
+            },
+            {
+                question: "Faut-il absolument acheter un chargeur séparément ?",
+                answer: "Malheureusement oui. Quasiment tous les grands constructeurs (Apple, Samsung, Google) ne fournissent plus le bloc de charge dans la boîte au nom de l'écologie. Seules des marques comme Xiaomi continuent d'inclure les chargeurs ultra-rapides (67W, 120W) dans leurs coffrets."
+            },
+            {
+                question: "La 5G est-elle indispensable lors de l'achat ?",
+                answer: "Oui. Même si vous n'avez pas (encore) un forfait 5G, acheter un smartphone 4G en 2026 limiterait considérablement sa durée de vie et sa valeur de revente. Les réseaux 5G sont désormais bien déployés dans les moyennes et grandes agglomérations."
+            }
+        ]
+    },
+    {
+        title: "Écouteurs et Casques à Réduction de Bruit : Le Comparatif Absolu",
+        slug: "guide-meilleur-casque-ecouteurs-anc-sans-fil",
+        description: "Bruit du métro, open space bruyant ou besoin d'immersion totale : découvrez notre guide comparatif des meilleurs casques et écouteurs sans fil (ANC) en 2026.",
+        coverImage: "/images/deals/airpods-4.jpg",
+        publishDate: "2026-03-12",
+        readTime: 10,
+        author: authors.find(a => a.id === "thomas-d")!,
+        category: "High-Tech",
+        sections: [
+            {
+                type: "text",
+                h2: "L'ère de l'audio spatial et du silence artificiel",
+                content: "La réduction de bruit active (ANC) n'est plus un luxe réservé aux professionnels voyageant en avion. Grâce à des processeurs toujours plus miniaturisés et puissants (comme la puce H2 d'Apple ou le processeur V1 de Sony), les algorithmes calculent et envoient des ondes acoustiques inversées ('anti-bruit') des milliers de fois par seconde pour annuler les sons environnants.\n\nMais le marché s'est complexifié. Faut-il choisir un casque circum-auriculaire pour une bulle parfaite, ou des écouteurs True Wireless pour la portabilité absolue ?"
+            },
+            {
+                type: "list",
+                h3: "Les 3 formats à considérer :",
+                listItems: [
+                    "Casque Circum-auriculaire (Over-ear) : Englobe l'oreille complète. Offre la meilleure qualité sonore (haut-parleurs plus larges), l'ANC la plus puissante, et la plus grande autonomie (30-60h). Idéal pour le télétravail ou l'avion.",
+                    "Écouteurs Intra-auriculaires (In-ear) : Entrent dans le conduit auditif avec un embout en silicone. Isolation passive excellente, format de poche, idéal pour le sport.",
+                    "Écouteurs Ouverts (Open-fit) : Se posent dans le creux de l'oreille sans l'obstruer. Confort maximum sur la durée, mais laissent mécaniquement passer plus de bruit malgré l'ANC."
+                ]
+            },
+            {
+                type: "text",
+                h2: "Apple crée la surprise avec le format ouvert",
+                content: "Jusqu'à récemment, l'ANC nécessitait un embout intra-auriculaire (comme les AirPods Pro) pour boucher physiquement le conduit auditif. Apple a réussi un tour de force avec sa 4ème génération d'AirPods : proposer de la réduction de bruit active dans des écouteurs classiques qui ne rentrent pas profondément dans l'oreille. Le succès commercial est retentissant pour ceux qui ne supportent pas de ressentir une 'pression' dans leurs canaux."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["apple-airpods-4-anc"]
+            },
+            {
+                type: "text",
+                h2: "Le sommet de la montagne : Les casques ANC",
+                content: "Si la portabilité n'est pas votre critère n°1, le casque reste incontournable. **Sony** continue de dominer le segment 'technologique' avec le WH-1000XM5. L'algorithme d'isolation Sony est effrayant d'efficacité contre les voix humaines en open space. De son côté, **Sennheiser** joue la carte de l'autonomie folle (60 heures !) et du son typé audiophile avec le Momentum 4. Le choix dépendra donc de votre priorité entre 'le silence absolu' et 'l'endurance musicale'."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["sony-wh-1000xm5-casque-reduction-bruit-noir", "sennheiser-momentum-4-wireless-anc-60h"]
+            }
+        ],
+        faqs: [
+            {
+                question: "L'ANC (réduction de bruit) abîme-t-elle l'audition ?",
+                answer: "C'est l'inverse ! En annulant le bruit ambiant du métro ou de la rue, l'ANC vous permet d'écouter votre musique à un volume beaucoup plus bas. C'est donc un excellent moyen de protéger votre audition sur le long terme (à condition de ne pas pousser le volume à fond)."
+            },
+            {
+                question: "Que signifie le mode 'Transparence' ou 'Bruit Ambiant' ?",
+                answer: "C'est la fonction inverse de l'ANC. Les microphones externes captent les sons environnants, les nettoient et les rediffusent dans vos haut-parleurs. Cela vous permet d'entendre une annonce en gare, de discuter avec quelqu'un ou de marcher en rue en toute sécurité sans enlever votre casque."
+            },
+            {
+                question: "Les derniers écouteurs Apple fonctionnent-ils avec un smartphone Android ?",
+                answer: "Oui, mais comme de simples écouteurs Bluetooth classiques. Vous perdez la magie de l'écosystème : pas d'appairage rapide, pas de basculement automatique entre les appareils, et surtout pas d'audio spatial personnalisé ni de gestion fine des réglages via l'iPhone."
+            }
+        ]
+    },
+    {
+        title: "Air Fryer : Notre Comparatif des Meilleures Friteuses Sans Huile",
+        slug: "guide-comparatif-meilleur-air-fryer-friteuse-sans-huile",
+        description: "Gadget ou véritable révolution culinaire ? Découvrez pourquoi l'Air Fryer a envahi nos cuisines, ses avantages par rapport à un four traditionnel, et quel modèle familial (comme les Ninja) choisir.",
+        coverImage: "/images/deals/ninjafood.jpg",
+        publishDate: "2026-03-15",
+        readTime: 9,
+        author: authors.find(a => a.id === "marc-t")!,
+        category: "Maison & Cuisine",
+        sections: [
+            {
+                type: "text",
+                h2: "Qu'est-ce qu'un Air Fryer et comment ça marche ?",
+                content: "Le nom est trompeur. Non, un Air Fryer ('Friteuse à air') ne \"frit\" pas vraiment les aliments. C'est en réalité un four à chaleur tournante (convection) extrêmement compact, très puissant, et sur-ventilé. \n\nLà où un grand four encastrable met 15 minutes à préchauffer et chauffe beaucoup d'air inutile, l'Air Fryer souffle un cyclone d'air bouillant et sec (jusqu'à 240°C) de manière très concentrée sur vos aliments. Résultat : l'humidité de surface s'évapore quasi instantanément, créant une croûte croustillante très similaire à la friture (l'effet de la réaction de Maillard), mais avec 75 % de matières grasses en moins."
+            },
+            {
+                type: "list",
+                h3: "Pourquoi acheter un Air Fryer par rapport à un four ?",
+                listItems: [
+                    "Vitesse absolue : Préchauffage nul ou très court (2 minutes). Vous cuisinez des nuggets ou des frites surgelées en 12 minutes montre en main au lieu de 25.",
+                    "Économie d'énergie : Ces appareils chauffent un très petit volume et cuisent plus vite. Sur l'année, l'économie électrique par rapport à un four de 2500W est très mesurable.",
+                    "Croustillant inégalé : La vitesse du ventilateur évacuant l'humidité garantit des textures que seul le bain de vraie friture pouvait atteindre auparavant.",
+                    "Réchauffage express : C'est le tueur du micro-ondes. Au lieu de ramollir une part de pizza ou un croissant de la veille, l'Air Fryer lui redonne son croustillant d'origine."
+                ]
+            },
+            {
+                type: "text",
+                h2: "Le problème de l'espace sur le plan de travail : L'innovation Ninja",
+                content: "Le principal défaut des Air Fryers classiques de grande capacité ? Ils prennent autant de place au sol qu'un gros micro-ondes. Mais Ninja (le leader incontesté du segment) a révolutionné la donne en sortant son modèle 'Double Stack'. \n\nEn superposant ses deux grilles à la verticale, l'appareil divise son encombrement (sa 'footprint') en deux tout en gardant une capacité monstre de 9,5L, idéale pour de grandes tablées. Sa fonction DualZone permet également de cuire un poulet en haut et des légumes en bas, avec deux temps distincts, tout en faisant en sorte qu'ils finissent en même temps avec la commande SYNC."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["ninja-foodi-double-stack-xl-air-fryer"]
+            },
+            {
+                type: "text",
+                h2: "Multicuiseur ou Air Fryer dédié ?",
+                content: "Une question fréquente est le choix entre un appareil spécialisé et un tout-en-un comme l'Instant Pot Duo Crispy qui fait cookeo, yaourtière, cuisson sous-pression ET Air Fryer via un couvercle interchangeables.\n\nNotre avis ? L'Instant Pot est génial pour les ragoûts l'hiver. Mais si votre but principal est de manger croustillant et rapide tous soirs de la semaine, les paniers plats en tiroir des appareils Ninja dédiés offrent une meilleure circulation d'air que la cuve profonde d'un multicuiseur."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["instant-pot-duo-multicuiseur-7-en-1"]
+            }
+        ],
+        faqs: [
+            {
+                question: "Peut-on mettre du papier d'aluminium ou du papier sulfurisé dedans ?",
+                answer: "Oui, mais attention ! L'air doit circuler *sous* vos aliments. Si vous tapissez entièrement le panier bloquant la grille du fond, vos aliments cuiront à la vapeur dans leur jus et ne croustilleront pas. De plus, ne mettez jamais de papier léger sans aliment lourd dessus : le puissant ventilateur l'aspirera vers la résistance supérieure, provoquant un départ de feu."
+            },
+            {
+                question: "Peut-on cuire de la vraie viande (poulet, boeuf, saumon) ?",
+                answer: "C'est même là qu'il excelle le plus ! Les pavés de saumon restent juteux à cœur et dorés au-dessus (cuisson en 10 minutes environ), et le poulet rôti est fantastique (comptez 45-50 min selon la taille du poulet). La viande rouge nécessite par contre un peu plus de savoir-faire pour ne pas être trop asséchée."
+            },
+            {
+                question: "Faut-il mettre de l'huile dans un Air Fryer ?",
+                answer: "Pour les aliments qui en contiennent déjà naturellement ou provenant du rayon surgelés (frites industrielles, viandes), c'est inutile. Pour les frites de pommes de terre fraîches, une petite cuillère à soupe suffit amplement (contre un bain entier pour une friteuse classique)."
+            }
+        ]
+    },
+    {
+        title: "Montres Connectées Sport & Santé : Les Différences Entre Samsung et Garmin en 2026",
+        slug: "guide-comparatif-montre-connectee-sport-sante",
+        description: "Suivi ECG, analyse de sommeil, GPS double-fréquence... Comment choisir la bonne montre connectée selon que vous cherchiez un prolongement de votre téléphone ou un vrai coach sportif.",
+        coverImage: "/images/deals/galaxy-watch-6.jpg",
+        publishDate: "2026-03-18",
+        readTime: 11,
+        author: authors.find(a => a.id === "thomas-d")!,
+        category: "High-Tech",
+        sections: [
+            {
+                type: "text",
+                h2: "La santé au poignet : Plus qu'un simple podomètre",
+                content: "Oubliez les bracelets connectés d'il y a 5 ans qui se contentaient de compter vos pas. Les smartwatches de 2026 sont de véritables cliniques miniatures. Avec l'intégration généralisée des électrocardiogrammes (ECG) certifiés médicalement, des capteurs de température corporelle pour le suivi du cycle menstruel, et de l'analyse détaillée des phases de sommeil, votre montre en sait souvent plus sur votre santé que vous-même.\n\nMais le marché est divisé en deux grandes philosophies. D'un côté, les 'extensions de smartphones' (Apple Watch, Samsung Galaxy Watch) qui offrent une expérience intelligente absolue. De l'autre, les 'outils sportifs dédiés' (Garmin, Coros) qui sacrifient les applications tierces pour une autonomie colossale et des métriques de performance pointues."
+            },
+            {
+                type: "list",
+                h3: "Les critères pour trancher :",
+                listItems: [
+                    "L'autonomie : C'est le nerf de la guerre. Une montre Samsung ou Apple devra être rechargée tous les 1 à 2 jours. Une Garmin tiendra facilement 10 à 14 jours.",
+                    "L'écran : L'Amoled est aujourd'hui le standard pour un affichage vibrant au quotidien. Les écrans MIP transflectifs (plus lisibles au soleil et très économes) sont réservés aux montres de triathlon ultra-spécialisées.",
+                    "L'écosystème : Vous ne pourrez pas utiliser une Apple Watch avec un smartphone Android. À l'inverse, bien que les Samsung Watch fonctionnent sur la plupart des Android, l'ECG est souvent bridé si vous n'avez pas un téléphone Samsung."
+                ]
+            },
+            {
+                type: "text",
+                h2: "L'élégance technologique : Samsung Galaxy Watch 6 Classic",
+                content: "Pour les utilisateurs d'Android (en particulier Samsung), la Galaxy Watch 6 Classic est le choix premium par défaut. Le retour de la lunette rotative physique est un soulagement ergonomique immense. Son écran Super AMOLED est l'un des plus beaux du marché, et son suivi de sommeil a été considérablement affiné grâce à l'IA de Samsung Health."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["samsung-galaxy-watch-6-classic-47mm"]
+            },
+            {
+                type: "text",
+                h2: "L'hybride parfait pour les sportifs : Garmin Venu",
+                content: "Beaucoup de gens pensent (à tort) que Garmin ne fait que des montres moches pour les marathoniens. La gamme Venu prouve le contraire. Elle embarque un magnifique écran AMOLED comme les modèles Samsung/Apple, mais conserve l'ADN Garmin : un GPS ultra-précis, des plans d'entrainement dynamiques (Garmin Coach), le calcul de votre Body Battery, et surtout, près de deux semaines d'autonomie."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["garmin-venu-4-montre-gps-amoled-lunar-gold"]
+            }
+        ],
+        faqs: [
+            {
+                question: "Doit-on obligatoirement avoir son téléphone avec soi pour courir ?",
+                answer: "Non, toutes ces montres embarquent désormais leur propre puce GPS. Votre parcours et votre allure seront enregistrés sur la montre, puis synchronisés avec votre téléphone lors de votre retour à la maison."
+            },
+            {
+                question: "Qu'est-ce que la connectivité LTE/4G sur une montre ?",
+                answer: "Les modèles 'Cellular' ou LTE intègrent une e-SIM (abonnement mensuel supplémentaire requis chez votre opérateur). Cela permet de recevoir des appels, envoyer des SMS ou écouter Spotify en streaming même si votre téléphone est resté chez vous. Très pratique pour les runners qui veulent rester joignables."
+            },
+            {
+                question: "L'ECG d'une montre fonctionne-t-il vraiment ?",
+                answer: "Oui, les capteurs intégrés par Apple, Samsung ou Google ont reçu des certifications médicales (FDA aux US, CE en Europe). Ils sont capables d'identifier précisément des signes de fibrillation auriculaire, bien qu'ils ne remplacent jamais un vrai diagnostic médical."
+            }
+        ]
+    },
+    {
+        title: "Sèche-Cheveux & Lisseurs Haut de Gamme : L'Investissement vaut-il le coup ?",
+        slug: "guide-comparatif-meilleur-seche-cheveux-dyson-ghd",
+        description: "Dyson Supersonic, GHD Gold... Les appareils de coiffure premium promettent un séchage ultra-rapide sans abîmer le cheveu. Décryptage d'une révolution technologique dans la salle de bain.",
+        coverImage: "/images/deals/dyson.jpg",
+        publishDate: "2026-03-22",
+        readTime: 8,
+        author: authors.find(a => a.id === "sophie-l")!,
+        category: "Mode & Beauté",
+        sections: [
+            {
+                type: "text",
+                h2: "Pourquoi un sèche-cheveux coûte-t-il désormais 500€ ?",
+                content: "Il y a quelques années encore, mettre plus de 50€ dans un sèche-cheveux semblait absurde. Puis Dyson est arrivé et a bouleversé le marché en appliquant ses technologies de moteurs numériques (les mêmes que dans ses aspirateurs sans fil) à la beauté.\\n\\nLa différence fondamentale ? Un sèche-cheveux traditionnel de supermarché utilise une grosse résistance chauffante et un ventilateur basique. Il 'cuit' vos cheveux pour évaporer l'eau (pouvant dépasser les 150°C, ce qui détruit la kératine). Les appareils premium comme le Dyson Supersonic misent sur le **débit d'air à très haute vitesse** plutôt que sur la chaleur extrême, couplé à des thermistances qui mesurent la température 40 fois par seconde pour ne jamais brûler la fibre capillaire."
+            },
+            {
+                type: "list",
+                h3: "Les 3 avantages des appareils premium :",
+                listItems: [
+                    "Une protection thermique absolue : Le contrôle intelligent de la chaleur empêche l'apparition des pointes fourchues et préserve la brillance naturelle (et les colorations).",
+                    "Un gain de temps au quotidien : Moteurs numériques tournant à 110 000 tr/min. Résultat : vous divisez votre temps de coiffage par deux tous les matins.",
+                    "L'ergonomie et le bruit : Le moteur étant placé dans le manche (et non dans la tête), l'équilibre est parfait, évitant les douleurs de poignet. Ils sont également réglés sur des fréquences acoustiques moins désagréables."
+                ]
+            },
+            {
+                type: "text",
+                h2: "L'intelligence artificielle au service du cuir chevelu",
+                content: "La dernière itération de Dyson, le Supersonic Nural™, pousse le concept encore plus loin. Il intègre des capteurs de distance (Time of Flight) qui détectent automatiquement si l'appareil s'approche trop près de votre crâne. Plus vous vous approchez, plus la température baisse automatiquement pour se stabiliser à une chaleur douce de 55°C pour protéger le cuir chevelu."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["dyson-supersonic-nural-seche-cheveux"]
+            },
+            {
+                type: "text",
+                h2: "Et du côté des lisseurs ?",
+                content: "La même révolution a eu lieu. GHD (Good Hair Day) reste la référence absolue en salon de coiffure. Au lieu de proposer des molettes manuelles pour régler la température (où tout le monde finit par mettre 220°C pour aller plus vite, ruinant ses cheveux), un lisseur premium maintient une température constante, idéale, et scientifiquement prouvée de 185°C des racines aux pointes."
+            },
+            {
+                type: "deal",
+                dealSlugs: ["ghd-gold-lisseur-cheveux-professionnel"]
+            }
+        ],
+        faqs: [
+            {
+                question: "Puis-je utiliser ces appareils tous les jours sans risquer de perdre mes cheveux ?",
+                answer: "C'est précisément l'intérêt de ces appareils haut de gamme. Contrairement aux modèles classiques qui dégradent la cuticule, la régulation thermique constante (et maintenue sous les seuils critiques) permet un usage très régulier. L'utilisation d'un spray thermo-protecteur reste néanmoins recommandée."
+            },
+            {
+                question: "Les accessoires magnétiques (Dyson) font-ils vraiment une différence ?",
+                answer: "Oui, en concentrant le flux d'air ou en le diffusant (pour les cheveux bouclés). Sur les derniers modèles Nural, les embouts contiennent même une puce RFID : l'appareil reconnaît l'accessoire et charge de lui-même vos préférences de vitesse et température sauvegardées."
+            },
+            {
+                question: "Un lisseur à 200€ est-il vraiment 5x mieux qu'un modèle à 40€ ?",
+                answer: "Sur le rendu immédiat, moins. Sur la santé de votre chevelure à long terme, incontestablement. Les capteurs préviennent la surchauffe inégale, et les plaques en céramique de haute qualité glissent sans accrocher ni casser le cheveu. L'investissement se justifie pleinement."
             }
         ]
     }

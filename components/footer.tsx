@@ -1,6 +1,7 @@
 import Link from "next/link"
-import { Zap } from "lucide-react"
+import { Zap, BookOpen } from "lucide-react"
 import { categories } from "@/data/categories"
+import { guides } from "@/data/guides"
 
 export function Footer() {
     const populaires = [
@@ -9,6 +10,11 @@ export function Footer() {
         { name: "Roborock Q7 L5+", href: "/bons-plans/robot-aspirateur-roborock-q7-max-plus" },
         { name: "Dyson Supersonic Nural™", href: "/bons-plans/dyson-supersonic-nural-seche-cheveux" },
     ]
+
+    const guidesLinks = guides.map((guide) => ({
+        name: guide.title.length > 40 ? guide.title.substring(0, 40) + "…" : guide.title,
+        href: `/guides/${guide.slug}`,
+    }))
 
     const legale = [
         { name: "Guides & Tests", href: "/guides" },
@@ -45,7 +51,7 @@ export function Footer() {
                     </div>
 
                     {/* Links Columns */}
-                    <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-4 gap-8">
 
                         {/* Categories */}
                         <div>
@@ -56,6 +62,21 @@ export function Footer() {
                                         <span className="w-1.5 h-1.5 rounded-full bg-white/20 group-hover:bg-primary transition-colors" />
                                         <Link href={`/${cat.slug}`} className="text-white/60 hover:text-white transition-colors text-sm">
                                             {cat.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Guides */}
+                        <div>
+                            <h3 className="font-heading text-lg font-bold mb-6 text-white">Nos Guides</h3>
+                            <ul className="space-y-3">
+                                {guidesLinks.map((link) => (
+                                    <li key={link.href} className="flex items-center gap-2 group">
+                                        <BookOpen className="w-3 h-3 text-primary/50 group-hover:text-primary transition-colors" />
+                                        <Link href={link.href} className="text-white/60 hover:text-primary transition-colors text-sm">
+                                            {link.name}
                                         </Link>
                                     </li>
                                 ))}

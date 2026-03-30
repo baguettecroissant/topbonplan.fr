@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     publisher: "TopBonPlan",
     alternates: {
         canonical: "https://topbonplan.fr",
+        languages: {
+            "fr": "https://topbonplan.fr",
+        },
     },
     openGraph: {
         title: "TopBonPlan.fr | Les Meilleurs Bons Plans & Comparatifs 2026",
@@ -88,12 +91,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <head>
-                <script defer src="https://nhmvgsrwhjsjnpncpiaj.supabase.co/functions/v1/analytics-collect?script=1"></script>
-            </head>
             <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
                 {children}
                 <Analytics />
+                <Script
+                    src="https://nhmvgsrwhjsjnpncpiaj.supabase.co/functions/v1/analytics-collect?script=1"
+                    strategy="afterInteractive"
+                />
             </body>
         </html>
     )

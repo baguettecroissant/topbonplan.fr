@@ -68,21 +68,53 @@ export default async function GuideSingle({ params }: Props) {
         "@type": "Article",
         headline: guide.title,
         description: guide.description,
-        image: `https://topbonplan.fr${guide.coverImage}`,
+        image: guide.coverImage.startsWith("http") ? guide.coverImage : `https://topbonplan.fr${guide.coverImage}`,
         author: {
             "@type": "Person",
             name: guide.author.name,
             jobTitle: guide.author.role,
+            description: guide.author.expertise,
         },
         datePublished: guide.publishDate,
+        dateModified: guide.lastModified || guide.publishDate,
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://topbonplan.fr/guides/${guide.slug}`,
+        },
         publisher: {
             "@type": "Organization",
             name: "TopBonPlan",
             logo: {
                 "@type": "ImageObject",
-                url: "https://topbonplan.fr/icon.png"
-            }
-        }
+                url: "https://topbonplan.fr/icon.png",
+            },
+        },
+    }
+
+    // BreadcrumbList schema
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accueil",
+                item: "https://topbonplan.fr",
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Guides & Tests",
+                item: "https://topbonplan.fr/guides",
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: guide.title,
+                item: `https://topbonplan.fr/guides/${guide.slug}`,
+            },
+        ],
     }
 
     return (
@@ -90,6 +122,10 @@ export default async function GuideSingle({ params }: Props) {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
 
             <Header />
